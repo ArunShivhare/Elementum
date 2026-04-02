@@ -1,12 +1,50 @@
-# React + Vite
+# Elementum React Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
 
-Currently, two official plugins are available:
+This project is a pixel-accurate implementation of the provided Figma design using React and Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+* React (Vite)
+* Tailwind CSS
+* Docker
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📱 Features
+
+* Fully responsive design (mobile, tablet, desktop)
+* Clean and reusable component structure
+* Pixel-close implementation of Figma design
+* Interactive UI elements (hover effects)
+
+## 🐳 Docker Setup
+
+### Build Image
+
+```bash
+docker build -t figma-app .
+```
+
+### Run Container
+
+```bash
+docker run -p 3000:3000 figma-app
+```
+
+Then open:
+http://localhost:3000
+
+## 📁 Project Structure
+
+* components/
+* assets/
+* reusable UI sections
+
+## ✨ Bonus
+
+* Added subtle hover animations
+* Clean UI transitions for better UX
+
+## 👤 Author
+
+Arun
