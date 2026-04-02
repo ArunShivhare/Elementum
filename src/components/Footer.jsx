@@ -1,49 +1,49 @@
 export default function Footer() {
   return (
-    <footer className="w-full px-6 md:px-12 py-16 bg-[#cfe3d4]">
+    <footer className="w-full px-6 md:px-20 py-20 bg-[#D1E7D6]">
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-sm text-gray-800">
+      {/* Divider line seen in image */}
+      <div className="w-full h-[1px] bg-gray-400/30 mb-20"></div>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-[13px] text-gray-800 tracking-tight">
         
-        {/* Company */}
-        <div>
-          <h3 className="font-medium mb-3">Company</h3>
-          <p>Home</p>
-          <p>Studio</p>
-          <p>Service</p>
-          <p>Blog</p>
+        <div className="space-y-4">
+          <h3 className="text-lg font-normal mb-6">Company</h3>
+          <p className="cursor-pointer hover:underline">Home</p>
+          <p className="cursor-pointer hover:underline">Studio</p>
+          <p className="cursor-pointer hover:underline">Service</p>
+          <p className="cursor-pointer hover:underline">Blog</p>
         </div>
 
-        {/* Terms */}
-        <div>
-          <h3 className="font-medium mb-3">Terms & Policies</h3>
-          <p>Privacy Policy</p>
-          <p>Terms & Conditions</p>
-          <p>Explore</p>
-          <p>Accessibility</p>
+        <div className="space-y-4">
+          <h3 className="text-lg font-normal mb-6">Terms & Policies</h3>
+          <p className="cursor-pointer hover:underline">Privacy Policy</p>
+          <p className="cursor-pointer hover:underline">Terms & Conditions</p>
+          <p className="cursor-pointer hover:underline">Explore</p>
+          <p className="cursor-pointer hover:underline">Accesibility</p>
         </div>
 
-        {/* Social */}
-        <div>
-          <h3 className="font-medium mb-3">Follow Us</h3>
-          <p>Instagram</p>
-          <p>LinkedIn</p>
-          <p>Youtube</p>
-          <p>Twitter</p>
+        <div className="space-y-4">
+          <h3 className="text-lg font-normal mb-6">Follow Us</h3>
+          <p className="cursor-pointer hover:underline">Instagram</p>
+          <p className="cursor-pointer hover:underline">LinkedIn</p>
+          <p className="cursor-pointer hover:underline">Youtube</p>
+          <p className="cursor-pointer hover:underline">Twitter</p>
         </div>
 
-        {/* Contact */}
-        <div>
-          <h3 className="font-medium mb-3">Contact</h3>
-          <p>14/4B Forum, STB</p>
-          <p>DLF Phase 1, 36001</p>
-          <p>+123 456 7890</p>
-          <p>info@elementum.com</p>
+        <div className="space-y-4">
+          <h3 className="text-lg font-normal mb-6">Terms & Policies</h3>
+          <p className="leading-relaxed">
+            1498w Fluton ste, STE <br />
+            2D Chicgo, IL 63867.
+          </p>
+          <p>(123) 456789000</p>
+          <p className="font-normal">info@elementum.com</p>
         </div>
       </div>
 
-      {/* Bottom */}
-      <div className="mt-12 text-center text-xs text-gray-600">
-        ©2022 Elementum. All rights reserved
+      <div className="mt-32 text-center text-[11px] text-gray-600 font-medium">
+        ©2023 Elementum. All rights reserved
       </div>
     </footer>
   );

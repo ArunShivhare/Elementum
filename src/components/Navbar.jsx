@@ -6,41 +6,38 @@ export default function Navbar() {
   const navItems = ["Home", "Studio", "Services", "Contact", "FAQs"];
 
   return (
-    <nav className="w-full px-6 md:px-12 py-5 flex items-center justify-between relative">
+    <nav className="w-full px-6 md:px-24 py-8 flex items-center justify-between bg-white relative z-50">
       
-      {/* Logo */}
-      <h1 className="text-lg font-medium tracking-wide">
+      <h1 className="text-2xl font-light tracking-tight text-gray-900 cursor-pointer">
         Elementum
       </h1>
 
-      {/* Center Menu (Desktop) */}
-      <ul className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10 text-sm font-normal">
+      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-12">
         {navItems.map((item, index) => (
-          <li
+          <button
             key={index}
-            className="cursor-pointer hover:text-gray-500 transition"
+            className="text-[13px] font-normal text-gray-800 hover:text-gray-500 transition-colors tracking-tight"
           >
             {item}
-          </li>
+          </button>
         ))}
-      </ul>
-
-      {/* Hamburger (always visible like Figma) */}
-      <div
-        className="cursor-pointer flex flex-col gap-[4px]"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span className="w-6 h-[1.5px] bg-black"></span>
-        <span className="w-6 h-[1.5px] bg-black"></span>
       </div>
 
-      {/* Mobile Menu */}
+      <button
+        className="group flex flex-col gap-[6px] items-end"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        <span className="w-8 h-[1px] bg-black transition-all group-hover:w-10"></span>
+        <span className="w-8 h-[1px] bg-black transition-all group-hover:w-6"></span>
+      </button>
+
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-6 gap-4 md:hidden z-50">
+        <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 flex flex-col items-center py-10 gap-6 md:hidden shadow-xl animate-in fade-in slide-in-from-top-4">
           {navItems.map((item, index) => (
-            <p key={index} className="cursor-pointer">
+            <button key={index} className="text-lg font-light tracking-wide text-gray-800">
               {item}
-            </p>
+            </button>
           ))}
         </div>
       )}

@@ -1,63 +1,75 @@
+import React from 'react';
+
 export default function Offer() {
   const offers = [
     {
-      title: "Collaborative & partnership",
       desc: "Office of multiple interest content",
+      title: "Colaborative & partnership",
     },
     {
-      title: "We talk about our weight",
       desc: "The hanger US Air force digital experimental",
+      title: "We talk about our weight",
     },
     {
-      title: "Piloting digital confidence",
       desc: "Delta faucet content, social, digital",
+      title: "Piloting digital confidence",
+      hasSticker: true,
     },
   ];
 
   return (
-    <section className="w-full px-6 md:px-12 py-24 relative overflow-hidden">
+    <section className="w-full px-6 md:px-20 py-24 bg-white relative overflow-hidden font-sans">
       
-      {/* Top decorative curve */}
-      <div className="hidden md:block absolute right-0 top-0 w-[300px] h-[150px] border-t-2 border-red-300 rounded-[100%]"></div>
+      <div className="absolute top-0 right-0 w-1/3 opacity-80 pointer-events-none">
+        <svg viewBox="0 0 400 200" fill="none" xmlns="http://w3.org">
+          <path d="M400,20 C300,20 250,150 150,150 C50,150 0,80 0,80" stroke="#FF8A8A" strokeWidth="3" />
+        </svg>
+      </div>
 
-      {/* Heading */}
-      <h2 className="text-3xl md:text-5xl font-medium leading-tight max-w-2xl">
-        What we{" "}
-        <span className="bg-green-200 px-3 rounded-full">can</span>{" "}
-        <span className="relative inline-block">
-          offer
-          <span className="absolute left-0 bottom-1 w-full h-1 bg-yellow-300 -z-10"></span>
-        </span>{" "}
-        you!
-      </h2>
+      <div className="mb-20">
+        <h2 className="text-6xl md:text-8xl font-normal tracking-tight text-gray-900 leading-tight">
+          What we{" "}
+          <span className="relative inline-block px-6">
+            <span className="absolute inset-0 bg-green-100 rounded-full -rotate-2"></span>
+            <span className="relative">can</span>
+          </span>
+          <br />
+          <span className="relative inline-block mt-2">
+            offer
+            <span className="absolute left-0 -bottom-2 w-full h-1 bg-yellow-400 rounded-full"></span>
+            <span className="absolute left-0 -bottom-4 w-3/4 h-1 bg-yellow-200 rounded-full opacity-50"></span>
+          </span>{" "}
+          you!
+        </h2>
+      </div>
 
-      {/* Divider */}
-      <div className="mt-10 border-t border-gray-300"></div>
-
-      {/* List */}
-      <div className="mt-6">
+      <div className="border-t border-gray-100">
         {offers.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-start md:items-center justify-between py-6 border-b border-gray-200 group cursor-pointer"
+            className="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gray-100 group cursor-pointer hover:bg-gray-50/50 transition-colors"
           >
-            
-            {/* Left text */}
-            <p className="text-gray-500 text-sm md:w-1/3">
-              {item.desc}
-            </p>
+            <div className="md:col-span-3">
+              <p className="text-gray-500 text-xs md:text-sm max-w-[180px] leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
 
-            {/* Right content */}
-            <div className="flex items-center justify-between md:w-2/3 mt-3 md:mt-0">
-              <h3 className="text-lg md:text-xl font-normal group-hover:text-black transition">
+            <div className="md:col-span-7 relative">
+              <h3 className="text-2xl md:text-4xl font-normal text-gray-800 tracking-tight">
                 {item.title}
               </h3>
 
-              {/* Minimal arrow line */}
-              <div className="flex items-center gap-2">
-                <span className="w-10 h-[1px] bg-black transition-all group-hover:w-16"></span>
-                <span className="text-sm">→</span>
-              </div>
+              {item.hasSticker && (
+                <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center rotate-12 shadow-sm overflow-hidden border-2 border-white">
+                   <span className="text-[8px] font-bold text-center leading-none uppercase">Confid-ence <br/>Verified</span>
+                </div>
+              )}
+            </div>
+
+            <div className="md:col-span-2 flex justify-end items-center gap-4">
+              <div className="h-[1px] w-12 bg-gray-300 group-hover:w-16 group-hover:bg-black transition-all duration-300"></div>
+              <span className="text-xl">→</span>
             </div>
           </div>
         ))}
